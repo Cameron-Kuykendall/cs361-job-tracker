@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Add Application – Job Tracker{% endblock %}
+{% block content %}
+<h1>Add Job Application</h1>
+<form method="post" action="{{ url_for('add') }}">
+    <label for="company">Company *</label>
+    <input type="text" id="company" name="company" value="{{ form.get('company', '') }}" required>
+
+    <label for="position">Position *</label>
+    <input type="text" id="position" name="position" value="{{ form.get('position', '') }}" required>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+        {% for s in statuses %}
+        <option value="{{ s }}" {% if form.get('status', 'Applied') == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="date_applied">Date Applied</label>
+    <input type="date" id="date_applied" name="date_applied" value="{{ form.get('date_applied', '') }}">
+
+    <label for="notes">Notes</label>
+    <textarea id="notes" name="notes">{{ form.get('notes', '') }}</textarea>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="{{ url_for('index') }}" class="btn" style="background:#aaa;color:white;margin-left:8px;">Cancel</a>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Edit Application – Job Tracker{% endblock %}
+{% block content %}
+<h1>Edit Job Application</h1>
+<form method="post" action="{{ url_for('edit', job_id=job.id) }}">
+    <label for="company">Company *</label>
+    <input type="text" id="company" name="company" value="{{ job.company }}" required>
+
+    <label for="position">Position *</label>
+    <input type="text" id="position" name="position" value="{{ job.position }}" required>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+        {% for s in statuses %}
+        <option value="{{ s }}" {% if job.status == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="date_applied">Date Applied</label>
+    <input type="date" id="date_applied" name="date_applied" value="{{ job.date_applied or '' }}">
+
+    <label for="notes">Notes</label>
+    <textarea id="notes" name="notes">{{ job.notes or '' }}</textarea>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ url_for('index') }}" class="btn" style="background:#aaa;color:white;margin-left:8px;">Cancel</a>
+    </div>
+</form>
+{% endblock %}
