@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 _secret_key = os.environ.get("SECRET_KEY")
 if not _secret_key:
+    logging.basicConfig()
     logging.warning(
         "SECRET_KEY environment variable not set. Using an insecure default. "
         "Set SECRET_KEY before deploying to production."
@@ -139,5 +140,5 @@ def delete(job_id):
 
 if __name__ == "__main__":
     init_db()
-    debug = os.environ.get("FLASK_DEBUG", "0") == "1"
+    debug = os.environ.get("FLASK_DEBUG", "").lower() in ("1", "true", "yes")
     app.run(debug=debug)
