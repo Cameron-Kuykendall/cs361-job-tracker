@@ -1,0 +1,126 @@
+.newApplication {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.newApplication h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 35px;
+}
+
+.requiredNote {
+    color: #6b7280;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.requiredStar {
+    color: #dc2626;
+    margin-right: 6px;
+    font-weight: 700;
+}
+
+.applicationCard {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+.formGroup textarea {
+    resize: vertical;
+}
+
+.buttonRow {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.cancelButton {
+
+    background: #e5e7eb;
+
+    color: black;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.saveButton {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.saveButton:hover {
+    background: #1d4ed8;
+}
+
+.cancelButton:hover {
+    background: #d1d5db;
+}

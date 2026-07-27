@@ -1,0 +1,124 @@
+.applications{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.pageHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.pageHeader h1{
+    margin-bottom:10px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton,
+.deleteButton {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  background: #e5e7eb;
+}
+
+.pageHeader p{
+    color:#6b7280;
+}
+
+.newButton{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.tableCard{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    text-align:left;
+    padding:20px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+td{
+    padding:20px;
+    border-bottom:1px solid #f1f5f9;
+}
+
+.status{
+    padding:6px 14px;
+    border-radius:999px;
+    font-weight:600;
+    display:inline-block;
+}
+
+.applied{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.interview{
+    background:#ffedd5;
+    color:#ea580c;
+}
+
+.rejected{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.tableFooter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px;
+}
+
+.pagination{
+    display:flex;
+    gap:10px;
+}
+
+.pagination button{
+    width:40px;
+    height:40px;
+    border:1px solid #d1d5db;
+    background:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.pagination .active{
+    background:#2563eb;
+    color:white;
+    border:none;
+}
